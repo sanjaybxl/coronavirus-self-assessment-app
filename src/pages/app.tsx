@@ -13,7 +13,6 @@ const AppView = (): JSX.Element => {
 
     const start = () => setCurrentQuestionIndex(0);
     const handleNextQuestion = (arg: any) => {
-        console.log('arg', arg);
         const res = {
             ...response,
             ...arg.value

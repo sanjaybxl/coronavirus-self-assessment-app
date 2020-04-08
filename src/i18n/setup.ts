@@ -21,7 +21,6 @@ if(typeof XMLHttpRequest !== 'undefined'){
         fallbackLng: ["en"],
         whitelist: ["en"],
         defaultNS: "translation",
-        debug: true,
         backend: {
             loadPath: "/locales/{{lng}}/{{ns}}.json"
         },

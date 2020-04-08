@@ -9,7 +9,6 @@ import { FormResult } from "../../types";
 import { assessResult, createRecommendation } from "../lib/calculator";
 import Recommendations from "containers/Recommendations";
 import SEO from "components/SEO";
-import Share from "containers/Share";
 import About from "containers/About";
 import DataInfo from "containers/DataInfo";
 
@@ -27,19 +26,7 @@ const Result = (): JSX.Element => {
     const results: FormResult = formResults;
 
     const assessment = assessResult(results);
-    const { title, recommendations, riskScore, illnessScore } = createRecommendation(assessment);
-
-    const debug = {
-        illnessScore,
-        riskScore,
-        title,
-        recommendations,
-        answers: Object.entries(results).map(
-            data => `${data[0]}: ${data[1] && data[1].name}(${data[1] && data[1].value})`
-        )
-    };
-
-    console.log(debug);
+    const { title, recommendations, illnessScore } = createRecommendation(assessment);
 
     // Checking if translation exists
     if (!results || !t(`assessment:${title}`))
@@ -74,13 +61,12 @@ const Result = (): JSX.Element => {
                         {t("what_can_you_do")}
                     </Button>
                 </Actions>
-               
+
             </ViewWrapper>
-            <Share />
-            <DataInfo/>
+            <DataInfo />
 
             <Recommendations recommendations={recommendations} />
-            <About light={true}/>
+            <About light={true} />
 
         </>
     );

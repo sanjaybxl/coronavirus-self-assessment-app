@@ -55,7 +55,6 @@ const Question: React.FC<QuestionProps> = ({
         });
     };
     const setValueTemp = (value: FormValue): void => {
-        console.log(question.name, value);
         setValue(value[0], value[1])
     };
 

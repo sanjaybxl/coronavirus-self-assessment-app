@@ -49,7 +49,8 @@ export function createRecommendation(assessments: AssessmentGroup): Assessment {
     const recommendations: AssessmentTranslationKey[] = [];
 
     if (illnessScore < .2) {
-        recommendations.push("RECOMMENDATION_WASH_HANDS", "RECOMMENDATION_AVOID_CROWDS", "RECOMMENDATION_LIMIT_TRAVEL", "RECOMMENDATION_KEEP_SOCIAL_DISTANCE");
+        recommendations.push("RECOMMENDATION_WASH_HANDS", "RECOMMENDATION_AVOID_CROWDS",
+         "RECOMMENDATION_LIMIT_TRAVEL", "RECOMMENDATION_KEEP_SOCIAL_DISTANCE");
         if (riskScore > 1) recommendations.push("RECOMMENDATION_ASK_FRIENDS_OR_FAMILY_TO_DO_SHOPPING", "RECOMMENDATION_MONITOR_YOURSELF", "RECOMMENDATION_WEAR_GLOVES_AND_MASK_WHEN_CONTACTING_OTHERS");
     } else if (illnessScore < .6) {
         if (riskScore > 1) recommendations.push("RECOMMENDATION_CALL_INFORMATION");
