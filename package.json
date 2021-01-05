@@ -19,7 +19,7 @@
     "@ctrl/tinycolor": "^2.6.1",
     "@reach/router": "^1.2.1",
     "@types/react-slick": "^0.23.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "i18next": "^19.3.3",
     "i18next-browser-languagedetector": "^4.0.2",
     "i18next-fetch-backend": "^2.2.0",
